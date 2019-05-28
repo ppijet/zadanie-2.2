@@ -1,4 +1,4 @@
-body {
+bbody {
     font-family: Quicksand;
     margin: 0;
     background: #a9a9a9;
@@ -7,6 +7,7 @@ body {
 a {
     color: #808080;
     text-decoration: none;
+    font-size: 25px;
 }
 
 ul {
@@ -15,8 +16,8 @@ ul {
 }
 
 li {
-    height: 50px;
-    line-height: 50px;
+    height: 70px;
+    line-height: 70px;
     width: 200px;
 }
 
@@ -26,30 +27,34 @@ nav {
     top: 0;
 }
 
-li:hover {
+.horizontal-menu li:hover {
     background-color: #696969;
 }
 
-nav a {
+.vertical-menu li:hover {
+    background-color: #696969;
+}
+
+.vertical-menu a {
     display: block;
 }
 
-nav li {
+.horizontal-menu li {
     display: inline-block;
 }
 
-nav ul {
+.horizontal-menu {
     background-color: #000000;
     text-align: center;
-
 }
 
-nav ul ul li {
+.vertical-menu li {
     display: block;
     transition-duration: 800ms;
+    background-color: #000000;
 }
 
-nav > ul > li > ul {
+.vertical-menu {
     visibility: hidden;
     position: absolute;
     transform: scaleY(0);
@@ -59,21 +64,13 @@ nav > ul > li > ul {
     transition: 200ms;
 }
 
-nav li:hover ul {
-    display:block;
+.horizontal-menu li:hover ul {
+    display: block;
     visibility: visible;
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
 }
 
-nav > li {
-    float:left;
-    background-color:#FDD700;
-    width:150px;
-    margin-left:1px;
-    height:2em;
-}
-
-ul > li:hover > a {
+.horizontal-menu li:hover > a {
     color: #ffffff;
 }
